@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+       <div class="row">
+        <span onclick="login()">Login</span>
+        <span onclick="register()">Register</span>
+       <div id="indecator"></div>
+       </div>
+
+       <div class="form">
+        <form id="login-form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+           
+            <button>Log In</button>
+            <span>Create an account <a href="#" onclick="register()">Click Here</a></span>
+        </form>
+        <form id="reg-form">
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Register</button>
+            <span>All ready have an account <a href="#" onclick="login()">Click Here</a></span>
+        </form>
+       </div>
+    </div>
+
+<script>
+    var indecator = document.getElementById('indecator');
+    var loginForm = document.getElementById('login-form');
+    var registerForm = document.getElementById('reg-form');
+    function login(){
+         indecator.style.transform = "translateX(11px)"
+        loginForm.style.transform = "translateX(0px)"
+        registerForm.style.transform = "translateX(250px)"
+    
+    }
+    function register(){
+        indecator.style.transform = "translateX(94px)"
+        loginForm.style.transform = "translateX(-250px)"
+        registerForm.style.transform = "translateX(0)"
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
